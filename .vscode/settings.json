@@ -3,6 +3,9 @@
         "iostream": "cpp",
         "atomic": "cpp",
         "bitset": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "algorithm": "cpp",
+        "ostream": "cpp",
+        "string": "cpp"
     }
 }

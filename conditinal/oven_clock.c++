@@ -9,7 +9,7 @@ int main(){
 
     if (minute + minute_to_add < 60){
         minute = minute + minute_to_add;
-    }
+    }//
     else{
         hour = (hour + (minute + minute_to_add) / 60) % 24;
         minute = (minute + minute_to_add) % 60;
