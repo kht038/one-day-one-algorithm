@@ -6,6 +6,7 @@
         "iosfwd": "cpp",
         "algorithm": "cpp",
         "ostream": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "bit": "cpp"
     }
 }
