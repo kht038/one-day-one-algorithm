@@ -4,19 +4,28 @@ using namespace std;
 
 int main(){
     string A, B, bigger, sum, reverse;
-    int one = 0;
+    int one, diff = 0;
     int raise = 0;
     cin >> A >> B;
     if(A.size() < B.size()){
         bigger = B;
-        A = B;
-        B = bigger;
+        B = A;
+        A = bigger;
     }
-
+    diff = A.size() - B.size();
+    if (diff > 0){
+        for (int i = 0; i < diff; i++){
+            B.insert(B.begin(), '0');
+        }
+    }
     for (int i = A.length(); i >= 0; i--){
         int a = 0, b = 0;
-        a = A[i] - '0';
-        b = B[i] - '0';
+        if(A[i] > 0){
+            a = A[i] - '0';
+        }
+        if(B[i] > 0){
+            b = B[i] - '0';
+        }
         int add = 0;
         if(raise  > 0){
             add = a + b + raise;
@@ -26,7 +35,6 @@ int main(){
         }
         raise = add / 10;
         add %= 10;
-        cout << add + '0' << endl;
         char add_char = add + '0';
         reverse += add_char; 
     }
